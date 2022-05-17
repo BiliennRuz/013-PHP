@@ -19,6 +19,11 @@
             <div class="row mt-5">
                 <?php  $villes = ["Rennes","Brest","Nantes","Quimper","Paris"];  ?>
                 <div class="col-6 offset-3">
+                    <?php if(!empty($erreur)): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?=$erreur?>
+                        </div>
+                    <?php endif ?>
                     <form action="" method="post">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
