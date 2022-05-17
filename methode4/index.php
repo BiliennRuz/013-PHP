@@ -1,3 +1,4 @@
+<?php include "traitement.php" ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -18,7 +19,7 @@
             <div class="row mt-5">
                 <?php  $villes = ["Rennes","Brest","Nantes","Quimper","Paris"];  ?>
                 <div class="col-6 offset-3">
-                    <form action="traitement.php" method="post">
+                    <form action="" method="post">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Email</label>
                             <input type="text" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
