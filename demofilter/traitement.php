@@ -2,7 +2,7 @@
     // verif email
     function checkEmail(&$email){
         $email = filter_var($_POST["email"],FILTER_SANITIZE_EMAIL);
-        if(!isset($email) ||  !filter_var($email,FILTER_VALIDATE_EMAIL)){
+        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
             throw new Exception("Email non valide");
         }
     }
