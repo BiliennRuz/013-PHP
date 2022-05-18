@@ -2,9 +2,16 @@
     // verif email
     function checkEmail(&$email){
         $email = filter_var($_POST["email"],FILTER_SANITIZE_EMAIL);
-        if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        // if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        //     throw new Exception("Email non valide");
+        // }
+        if(!filter_var($email,FILTER_VALIDATE_REGEXP,array(
+            "options"=>array(
+                "regexp"=>"/^[a-zA-Z0-9\.\_\-]+\@[a-zA-Z0-9\.\_\-]+\.[a-zA-Z]{2,5}$/"
+            )
+        ))){
             throw new Exception("Email non valide");
-        }
+        }        
     }
 
     if(isset($_POST["submit"]) && isset($_POST["email"]) ){
