@@ -27,6 +27,7 @@
             checkRequiredField($operande1,"Le opérande 1 ne peut pas entre vide ou non numerique");              
             checkRequiredField($operande2,"Le opérande 2 ne peut pas entre vide ou non numerique");
             if(function_exists( $operateur)){
+                // fonction variable
                 $result = $operateur($operande1,$operande2);
             }
         }catch(Exception $e){
