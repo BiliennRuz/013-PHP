@@ -2,7 +2,7 @@
 
     class Form{
 
-        private $form;
+        protected $form;
 
         public function __construct($action,$method,$name)
         {
@@ -21,12 +21,14 @@
                     <input type='$type' id='$nom' name='$nom'> 
                 </div>    
             ";
+            return $this;
         }
 
         public function setSubmit($nom){
             $this->form = $this->form . "                
                 <input type='submit' id='$nom' name='$nom' value='$nom' > 
             ";
+            return $this;
         }
 
         public function getForm(){

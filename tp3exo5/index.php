@@ -9,14 +9,16 @@
 <body>
     <?php
 
-        require "classe/formulaire.php";
-        $form = new Form("","post","Inscription");
-        $form->setText("Prénom","prenom");
-        $form->setText("Nom","nom");
-        $form->setText("Email","email","email");
-        $form->setText("Mot de passe","password","password");
-        $form->setText("Age","age","number");
-        $form->setSubmit("Ajouter");
+        require "classe/formulaire2.php";
+        $form = new Form2("","post","Inscription");
+        $form->setText("Prénom","prenom") 
+             ->setText("Nom","nom")
+             ->setText("Email","email","email")
+             ->setText("Mot de passe","password","password")
+             ->setText("Age","age","number")
+             ->setRadioButton("Féminin","f","genre")
+             ->setRadioButton("Masculin","m","genre")
+             ->setSubmit("Ajouter");
         echo $form->getForm();
 
     ?>
