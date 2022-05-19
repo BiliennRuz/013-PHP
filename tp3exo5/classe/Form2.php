@@ -1,6 +1,6 @@
 <?php
 
-    require_once "formulaire.php";
+    require_once "Form.php";
 
     class Form2 extends Form{
 
