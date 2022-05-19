@@ -1,4 +1,5 @@
-<?php 
+<?php     
+    namespace App\Model;
     
     require_once "personne.class.php";
 
@@ -17,7 +18,7 @@
         }
         
         public function parler(){
-            echo "Je suis Client mon nom est {$this->getNom()}";
+            echo "Je suis Client mon nom est {$this->getNom()} <br>";
         }
 
         /**

@@ -8,9 +8,16 @@
 </head>
 <body>
     <?php
-        require_once 'client.class.php';
-        $steve = new Client("Steve","Lucas",33,"Quimper","0654879865");    
-        $pierre = new Client("Pierre","Maisel",33,"Brest","321321321"); 
+        require_once 'model/client.class.php';
+        require_once 'controller/client.controller.php';
+        require_once 'model/vendeur.class.php';
+
+        use App\Model\Client as c1;
+        use App\Controller\Client as c2;
+        use App\Model\Vendeur;
+
+        $steve = new c1("Steve","Lucas",33,"Quimper","0654879865");    
+        $pierre = new Vendeur("Pierre","Maisel",33,2200); 
         //$steve->setPrenom("Sarah")->setNom("De lor")->setAge(12);       
     ?>
     <h3> Nom: <?= $steve->getNom()  ?> </h3>
@@ -20,7 +27,8 @@
     <h3> Tel: <?= $steve->getTel()  ?> </h3>
 
     <?php
-        var_dump(Client::getCompteur());
+        $steve->parler();
+        $pierre->parler();
     ?>
 </body>
 </html>

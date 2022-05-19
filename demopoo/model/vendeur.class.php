@@ -1,7 +1,8 @@
 <?php 
 
-    require_once "personne.class.php";
+    namespace App\Model;
 
+    require_once "personne.class.php";
     class Vendeur extends Personne{
 
         private $ca;
@@ -12,7 +13,7 @@
         }
 
         public function parler(){
-            echo "Je suis Vendeur mon nom est {$this->getNom()}";
+            echo "Je suis Vendeur mon nom est {$this->getNom()} <br>";
         }
 
 
