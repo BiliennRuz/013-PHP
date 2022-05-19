@@ -1,5 +1,6 @@
 <?php 
 namespace App\Controller;
+
     class BlogController{
 
         public function doGet(){
