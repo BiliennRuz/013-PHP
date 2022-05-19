@@ -9,7 +9,7 @@
 <body>
     <?php
 
-        require "classe/formulaire2.php";
+        require_once "autoload.php";
         $form = new Form2("","post","Inscription");
         $form->setText("Prénom","prenom") 
              ->setText("Nom","nom")
