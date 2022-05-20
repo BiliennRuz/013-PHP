@@ -1,9 +1,7 @@
 <?php 
     require_once "app/ConnectionProvider.php";
-    $db = ConnectionProvider::getConnection(); // obtenir la connexion
-    $sql = "select * from article"; // requette SQL
-    $stmt = $db->query($sql); // Traitement de la requette 
-    $articles = $stmt->fetchAll(PDO::FETCH_ASSOC); // recup de données
+    require_once "controller/IndexController.php";
+    $articles = IndexController::index();    
 ?>
 <!DOCTYPE html>
 <html lang="en">
