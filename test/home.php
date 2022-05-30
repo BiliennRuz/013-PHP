@@ -10,27 +10,6 @@ if (file_exists('test.xml')) {
         $dbname=$xml->dbname;
         $db = new PDO("mysql:host=$hote;dbname=$dbname",$username,$pwd);// Admin
     
-// /**
-//  *  Insert new article
-//  */
-//         $sql = "INSERT INTO article (titre, description, prix) VALUES (:titre, :desc, :prix)";
-//         $stmt = $db-> prepare($sql);
-//         $stmt ->bindValue(":titre", "Samsug s22");
-//         $stmt ->bindValue(":desc", "téléphone Samsug s22");
-//         $stmt ->bindValue(":prix", 1200);
-//         $stmt ->execute();
-
-// /**
-//  *  update article 2
-//  */
-
-// $sql = "UPDATE article SET prix=:prix WHERE titre=:titre";
-// $stmt = $db-> prepare($sql);
-// $stmt ->bindValue(":titre", "bouteille");
-// $stmt ->bindValue(":prix", 1000);
-// $stmt ->execute();
-
-
 /**
  *  Select all articles
  */

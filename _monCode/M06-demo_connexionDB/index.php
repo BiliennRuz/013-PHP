@@ -11,7 +11,6 @@ try {
 
     $sql = "SELECT * FROM article";
 
-
     $stmt = $db->query($sql);
     // recupe d'un tableau
     $all = $stmt->fetchall(PDO::FETCH_ASSOC);
